@@ -39,8 +39,6 @@ public class ThreadController {
         st1.XmlFlg();
         st2.XmlFlg();
 
-        
-        
         try{
         //鍵の保存
         st1.SavePK();
