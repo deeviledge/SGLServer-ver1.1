@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PeerDynamicInformation>
+<DynamicInformation xmlns:ID="0003">
+    <PeerName>nutscream</PeerName>
+    <IP>133.66.164.48</IP>
+    <RemoteIP>133.66.164.69</RemoteIP>
+</DynamicInformation>
+<DynamicInformation xmlns:ID="0005">
+    <PeerName>panpukin</PeerName>
+    <IP>133.66.164.62</IP>
+    <RemoteIP>133.66.164.69</RemoteIP>
+</DynamicInformation>
+</PeerDynamicInformation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/sglserver/conf/usr/xml_files/GroupInformation.xml</url>
+            <bookmark id="1">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/keyexchange/ThreadController.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/keyexchange/ServerThread.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/servermain/MakeGroupProcess.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/conf/usr/xml_files/DynamicPeerInformation.xml</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/keyexchange/KEServer.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/keyexchange/RoundServer.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/keyexchange/KEControllServer.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/servermain/ServerConnect.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/groupinformation/GroupInformationXml.java</file>
+            <file>file:/C:/Users/Administrator/Desktop/TestServer-master/src/sglserver/conf/usr/xml_files/GroupInformation.xml</file>
+        </group>
+    </open-files>
+</project-private>
