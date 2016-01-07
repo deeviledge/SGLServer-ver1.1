@@ -5,7 +5,10 @@
  */
 package sglserver.keyexchange;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -16,6 +19,7 @@ import java.net.Socket;
 public class ServerThread extends Thread{
     ServerSocket serversoc;
     Socket socket;
+    String line=null;
     
     public ServerThread(String ip,int roundport){
         try{
@@ -29,6 +33,18 @@ public class ServerThread extends Thread{
             e.printStackTrace();
             System.out.println("サーバーソケット生成中になんかあった");
         }
+    }
+    public void ReceivePublicKey(){
+        try{
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            //公開鍵を受信
+            line = in.readLine();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Error:公開鍵の受信処理中になんかあった");
+        }
+
     }
     /*
     public void SavePK(){
