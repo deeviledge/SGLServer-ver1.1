@@ -48,7 +48,13 @@ public class ServerThread extends Thread{
     }
     /*
     public void SavePublicKey(){
-        
+        ここではdyanmicpeerinformation.javaのように
+        RoundInformationXml　rix=new RoundInformationXml();
+        rix.SavePublickey();
+        とういうふうに書くとよい。
+        よってsglserver.keyexchangeフォルダ内に新たにRoundInformation.javaのクラスを作成
+        さらにsglserver.roundinfromation.xml_filesフォルダを作成してフォルダ内に    RoundInformation.xmlを作成するとよい
+        RoundInformationXml内ではSavePublicKeyメソッドをsynchronizedにして処理の競合を避けるようにする
     }
     
     public void SavePK(){
