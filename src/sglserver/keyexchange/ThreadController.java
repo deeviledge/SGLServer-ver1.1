@@ -53,11 +53,6 @@ public class ThreadController {
         
         }
         
-        
-        //xmlの書き込みが競合しないようにするフラグ管理
-        st1.XmlFlg();
-        st2.XmlFlg();
-        
         try{
         //保存されている鍵の読み出し
         PK1=st1.ReadXml();
