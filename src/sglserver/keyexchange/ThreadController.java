@@ -27,24 +27,24 @@ public class ThreadController {
             //↓usernameからユーザのIPを取得
             ip1=dpinfo.getIP(name1);
             ip2=dpinfo.getIP(name2);
-            
             System.out.println("ポート番号と接続IPの表示："+ip1+"→"+roundport1+";"+ip2+"→"+roundport2);
-            ServerThread st1=new ServerThread(ip1,roundport1);
-            System.out.println("waitメソッドまでは実行できてる");
-            ServerThread st2=new ServerThread(ip2,roundport2);
         }catch(Exception e){
             e.printStackTrace();
-            System.out.println("サーバースレッドが生成できないっぽいよ");
+            System.out.println("Error：DynamicPeerInformationの処理が失敗してるよ");
         }
         
-        
-        
+        try{
+            ServerThread st1=new ServerThread(ip1,roundport1);
+            System.out.println("ServerThread1実行完了");
+            ServerThread st2=new ServerThread(ip2,roundport2);
+            System.out.println("ServerThread2実行完了");            
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Error：サーバースレッドが生成できないっぽいよ");
+        }
+
         
         /*
-        //xmlの書き込みが競合しないようにするフラグ管理
-        st1.XmlFlg();
-        st2.XmlFlg();
-
         try{
         //鍵の保存
         st1.SavePK();
