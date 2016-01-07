@@ -21,11 +21,13 @@ public class ThreadController {
         
         try{
             DynamicPeerInformation dpinfo = new DynamicPeerInformation();
-            roundport1=Integer.parseInt("5"+dpinfo.getID(name1));//usernameからIDを取得して5と文字連結させてint型に変換
+            //↓usernameからIDを取得して5と文字連結させてint型に変換
+            roundport1=Integer.parseInt("5"+dpinfo.getID(name1));
             roundport2=Integer.parseInt("5"+dpinfo.getID(name2));
-            
-            ip1=dpinfo.getIP(name1);//usernameからユーザのIPを取得
+            //↓usernameからユーザのIPを取得
+            ip1=dpinfo.getIP(name1);
             ip2=dpinfo.getIP(name2);
+            
             System.out.println("ポート番号と接続IPの表示："+ip1+"→"+roundport1+";"+ip2+"→"+roundport2);
             ServerThread st1=new ServerThread(ip1,roundport1);
             System.out.println("waitメソッドまでは実行できてる");
@@ -34,6 +36,10 @@ public class ThreadController {
             e.printStackTrace();
             System.out.println("サーバースレッドが生成できないっぽいよ");
         }
+        
+        
+        
+        
         /*
         //xmlの書き込みが競合しないようにするフラグ管理
         st1.XmlFlg();

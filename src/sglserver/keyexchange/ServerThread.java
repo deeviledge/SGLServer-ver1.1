@@ -13,12 +13,11 @@ import java.net.Socket;
  *
  * @author tatoo
  */
-public class ServerThread {
+public class ServerThread extends Thread{
     ServerSocket serversoc;
     Socket socket;
     
     public ServerThread(String ip,int roundport){
-       
          try {
                 System.out.println("▽▽▽▽▽▽▽▽▽サーバソケットを生成するよ。ポート番号は"+roundport+"だよ▽▽▽▽▽▽▽▽▽▽▽▽");
                 socket = new Socket( ip , roundport );
@@ -29,7 +28,7 @@ public class ServerThread {
                     // TODO 自動生成された catch ブロック
                     e.printStackTrace();
                     System.out.println("サーバーソケット生成中になんかあった");
-            }
+        }
     }
     /*
     public void SavePK(){
