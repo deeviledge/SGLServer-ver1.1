@@ -18,16 +18,16 @@ public class ServerThread extends Thread{
     Socket socket;
     
     public ServerThread(String ip,int roundport){
-         try {
-                System.out.println("▽▽▽▽▽▽▽▽▽サーバソケットを生成するよ。ポート番号は"+roundport+"だよ▽▽▽▽▽▽▽▽▽▽▽▽");
-                socket = new Socket( ip , roundport );
-                System.out.println("SGLクライアントIP="+ip+"："+socket.getInetAddress()+"との接続完了");//接続先アドレスを返して表示
-                socket.close();
-                System.out.println("△△△△△△△△△接続してソケット閉じるとこまでいったよ。やった～！△△△△△△△△△△△△");
-            } catch (IOException e) {
-                    // TODO 自動生成された catch ブロック
-                    e.printStackTrace();
-                    System.out.println("サーバーソケット生成中になんかあった");
+        try{
+            System.out.println("▽▽▽▽▽▽▽▽▽サーバソケットを生成するよ。ポート番号は"+roundport+"だよ▽▽▽▽▽▽▽▽▽▽▽▽");
+            socket = new Socket( ip , roundport );
+            System.out.println("SGLクライアントIP="+ip+"："+socket.getInetAddress()+"との接続完了");//接続先アドレスを返して表示
+            socket.close();
+            System.out.println("△△△△△△△△△接続してソケット閉じるとこまでいったよ。やった～！△△△△△△△△△△△△");
+        } catch (IOException e) {
+            // TODO 自動生成された catch ブロック
+            e.printStackTrace();
+            System.out.println("サーバーソケット生成中になんかあった");
         }
     }
     /*
