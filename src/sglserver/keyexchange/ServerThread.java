@@ -36,10 +36,11 @@ public class ServerThread extends Thread{
     }
     public void ReceivePublicKey(){
         try{
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            //PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //公開鍵を受信
             line = in.readLine();
+            System.out.println("公開鍵を受信："+line);
         }catch(Exception e){
             e.printStackTrace();
             System.out.println("Error:公開鍵の受信処理中になんかあった");
