@@ -34,7 +34,7 @@ public class ServerThread extends Thread{
             System.out.println("サーバーソケット生成中になんかあった");
         }
     }
-    public void ReceivePublicKey(){
+    public String ReceivePublicKey(){
         try{
             //PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -45,7 +45,7 @@ public class ServerThread extends Thread{
             e.printStackTrace();
             System.out.println("Error:公開鍵の受信処理中になんかあった");
         }
-
+        return line;
     }
     /*
     public void SavePublicKey(){
