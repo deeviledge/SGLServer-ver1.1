@@ -41,6 +41,10 @@ public class ThreadController {
             pk1=st1.ReceivePublicKey();
             pk2=st2.ReceivePublicKey();
             
+            /*不正検知アルゴリズムがここに入る予定*/
+            
+            st1.SendPublicKey(pk2);
+            st2.SendPublicKey(pk1);
         }catch(Exception e){
             e.printStackTrace();
             System.out.println("Error：サーバースレッドが生成できないっぽいよ");
