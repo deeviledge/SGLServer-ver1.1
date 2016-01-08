@@ -43,7 +43,7 @@ public class ThreadController {
             System.out.println("Error：サーバースレッドが生成できないっぽいよ");
         }
 
-        
+        System.out.println("ThreadController.javaの終了");
         /*
         try{
         //鍵の保存
