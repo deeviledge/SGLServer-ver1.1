@@ -15,7 +15,7 @@ import sglserver.dynamicpeerinformation.DynamicPeerInformation;
 public class ThreadController {
     
     ServerSocket serversoc;
-    String ip1,ip2;
+    String ip1,ip2,pk1,pk2;
     int roundport1,roundport2;
     public ThreadController(String name1,String name2){
         
@@ -37,7 +37,10 @@ public class ThreadController {
             ServerThread st1=new ServerThread(ip1,roundport1);
             System.out.println("ServerThread1実行完了");
             ServerThread st2=new ServerThread(ip2,roundport2);
-            System.out.println("ServerThread2実行完了");            
+            System.out.println("ServerThread2実行完了");
+            pk1=st1.ReceivePublicKey();
+            pk2=st2.ReceivePublicKey();
+            
         }catch(Exception e){
             e.printStackTrace();
             System.out.println("Error：サーバースレッドが生成できないっぽいよ");
