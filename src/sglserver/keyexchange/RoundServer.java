@@ -44,11 +44,14 @@ public class RoundServer{
                         //コントローラークラス
                 }
                 System.out.println("RoundServerの処理終了");
+                
+                
+                
                 try{
-                if(command=="roundstart"){//commandがroundstartの時呼ばれ、finishの時は呼ばれない
-                    System.out.println("不正検知アルゴリズムに基づくサーバ経由での鍵交換を開始します");
-                   ThreadController tc=new ThreadController(names[0],names[1]);
-                }
+                    if(command=="roundstart"){//commandがroundstartの時呼ばれ、finishの時は呼ばれない
+                        System.out.println("不正検知アルゴリズムに基づくサーバ経由での鍵交換を開始します");
+                       ThreadController tc=new ThreadController(names[0],names[1]);
+                    }
                 }catch(Exception e){
                     e.printStackTrace();
                     System.out.println("Error:ThreadController.javaが生成できません");
