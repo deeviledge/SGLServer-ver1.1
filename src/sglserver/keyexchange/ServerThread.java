@@ -17,7 +17,6 @@ import java.net.Socket;
  * @author tatoo
  */
 public class ServerThread extends Thread{
-    ServerSocket serversoc;
     Socket socket;
     String line=null;
     
@@ -51,10 +50,10 @@ public class ServerThread extends Thread{
     public void SendPublicKey(String pk){
         try{
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            String input = "pk:";
-            input += ""+pk;
+            String input =pk;
             out.println(input);
             out.close();
+            socket.close();
         }catch(Exception e){
             System.out.println("公開鍵の送信中になんかあった");
         }
